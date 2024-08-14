@@ -24,7 +24,7 @@ function same(arr1, arr2) {
             return false;
         }
     }
-    return true; // test
+    return true;
 }
 
 console.log(same([1, 2, 3], [1, 9, 4]))
