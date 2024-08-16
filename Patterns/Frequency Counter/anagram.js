@@ -14,12 +14,11 @@ function areTheseAnagrams(str1, str2) {
     str2 = str2.trim().toLowerCase();
 
     // return false if they aren't same length
-
     if (str1.length !== str2.length) return false;
 
     // create empty objects to track character frequencies
-    str1Counts = {};
-    str2Counts = {};
+    const str1Counts = {};
+    const str2Counts = {};
 
     // iterate over each anagram, counting up its character frequencies ((character count || 0) + 1)
     for (let char of str1) str1Counts[char] = (str1Counts[char] || 0) + 1;
@@ -37,4 +36,4 @@ function areTheseAnagrams(str1, str2) {
     return true;
 }
 
-console.log(areTheseAnagrams('hello', 'hlelo'));
+console.log(areTheseAnagrams('cinema', 'iceman'));
