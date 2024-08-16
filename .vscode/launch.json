@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Patterns/Frequency Counter/same_naive.js"
+            "program": "${file}"
         }
     ]
 }
