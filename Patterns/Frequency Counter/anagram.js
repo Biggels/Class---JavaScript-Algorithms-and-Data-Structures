@@ -37,3 +37,25 @@ function areTheseAnagrams(str1, str2) {
 }
 
 console.log(areTheseAnagrams('cinema', 'iceman'));
+
+// another approach is to use one dictionary built from the first word, and then subtract letters from it as we "use" them in the second word
+// if we hit 0 for a letter, or we can't find the letter, it's not an anagram
+// this has less space complexity?
+
+function validAnagram(first, second) {
+    if (first.length !== second.length) return false;
+
+    let counts = {}
+
+    for (let char of first) counts[char] = (counts[char] || 0) + 1;
+
+    for (let char of second) {
+        if (!(char in counts)) return false;
+        if (counts[char] === 0) return false;
+        counts[char] -= 1;
+    }
+
+    return true;
+}
+
+console.log(validAnagram('robot', 'boort'))

@@ -1,0 +1,44 @@
+1. Understand the Problem
+    a. Restate the problem in your own words.
+    b. List the expected inputs. Try to think about in what form the inputs will come, and not just the most obvious.
+        i. Don't just say it's a number, ask yourself if it will be an integer or float, and will that always be the case?
+        ii. If it's a string, will it have symbols, upper and lower case? Does that affect how you handle the input?
+        iii. Summary: try to specific and think of the edge cases.
+    c. List the expected outputs.
+    d. Work backwards from the output to the input. Do you have enough information to solve the problem?
+        i. Can help you brainstorm intermediate steps you'll have to take to get from input to output.
+        ii. Or foresee where your biggest difficulty will be.
+    e. Label the important pieces of data, the variables.
+2. Explore Concrete Examples
+    a. Start with simple examples, then more complex.
+    b. Try empty and invalid inputs.
+    c. Write some examples down so you can refer back. e.g. func(input) // output
+3. Break It Down
+    a. Explicitly write out the steps you need to take.
+    b. This can just be in words, doesn't need to be code or pseudo-code.
+    c. But you might find it helpful to write out the very top-level skeleton of the code, with the functions and variables you'll need, and then just english to explain the actual steps/logic in between.
+    d. Try thinking through/visualizing how you would work through a simple example. e.g. talk through how you would iterate over an array and what would happen at each stage.
+4. Solve/Simplify (solve a part)
+    a. By simplify we mean solve a simpler problem, i.e. a part of the problem.
+    b. Find the core difficulty that's stumping you, and ignore or work around it, leave it as a black box. You can go back and re-incorporate the difficulty later.
+5. Look Back and Refactor
+    a. Check the result, use your earlier examples.
+    b. Think about different core methods or approaches to solve the same problem. 
+        i. Maybe there's some math you can look up that will simplify a calculation.
+        ii. Or a better way to work with a string through regex.
+        iii. Check some of the common problem solving patterns. Maybe you can use a frequency counter or multiple pointers, etc.
+    c. Try to make the code more readable - you should be able to understand what it does at a glance. 
+        i. Use friendly variable names that say what something actually is. A little longer but more readable is better than a tiny abbreviated mess you can't interpret.
+        ii. Try to be explicit where you can.
+        iii. Get rid of excessive nesting by reversing nested ifs.
+        iv. Don't repeat yourself. If you find yourself typing the same block twice, it should probably be a function.
+        v. Even if it's not repeated, extracting logic into dedicated functions with friendly names can make things more readable.
+        vi. Try not to use too many "fancy" one liners that are hard to parse. Don't code golf.
+        vii. Don't lean on comments as a crutch. The code should mostly speak for itself.
+    d. Evaluate the Big O complexity of your solution (mainly speed, but sometimes space too) and try to think about how you could improve it.
+        i. You're almost certainly doing something suboptimally if it's O(n^2)
+        ii. Are you using nested loops? There has to be a better way!
+        iii. Are you iterating over something large when a simple mathematical function could give you the same result?
+        iv. Are there cases that can be handled more simply, allowing you return early?
+    e. Look up how other people have solved the same or similar problems.
+    f. Can you use this method for some other problem you've worked with?
