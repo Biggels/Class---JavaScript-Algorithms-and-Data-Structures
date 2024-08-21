@@ -36,7 +36,7 @@ function maxSubarraySum(arr, n) {
     let sum = arr.slice(0, n).reduce((a, b) => a + b, null);
     let maxSum = sum;
 
-    // if (n > arr.length) return null;
+    if (n > arr.length) return null;
 
     for (let i = 1; i < arr.length - n + 1; i++) { // can start i at n and go to length, and subtract and add accordingly, but it doesn't matter
         sum = sum - arr[i - 1] + arr[i + n - 1]; // now we don't have a loop inside our loop, just some math and comparisons. so we're at O(n)
